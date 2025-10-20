@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order - UniNosh</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Place Your Order</h1>
+    <p>Choose your favorite meals and get them delivered fast!</p>
+  </header>
+
+  <!-- Order Form -->
+  <section id="order-section">
+    <form>
+      <label>Choose Vendor:</label><br>
+      <select>
+        <option>T Spices Kitchen vendor</option>
+        <option>Chow-arma vendor</option>
+        <option>Dang!!! Chills & Drinks vendor</option>
+        <option>Harmburger</option>
+      </select><br><br>
+
+      <label>Meal Name:</label><br>
+      <input type="text" placeholder="Enter meal name" /><br><br>
+
+      <label>Delivery Address:</label><br>
+      <input type="text" placeholder="Hostel or Location" /><br><br>
+
+    </form>
+  </section>
+<h2>Available Meals Now</h2>
+  <!-- Food Menu -->
+  <section class="menu">
+    <div class="food-item">
+      <img src="dunkin donut.jpg" alt="Donut" />
+      <h3>Donut</h3>
+      <p>₦1500</p>
+      <button class="add-btn" onclick="addToCart(this)">Add to Cart x0</button>
+    </div>
+
+    <div class="food-item">
+      <img src="swaemsm.jpg" alt="Shawarma" />
+      <h3>Shawarma</h3>
+      <p>₦2000</p>
+      <button class="add-btn" onclick="addToCart(this)">Add to Cart x0</button>
+    </div>
+
+    <div class="food-item">
+      <img src="jollof rice.jpg" alt="Jollof Rice" />
+      <h3>Jollof Rice</h3>
+      <p>₦1200</p>
+      <button class="add-btn" onclick="addToCart(this)">Add to Cart x0</button>
+    </div>
+  </section>
+<!-- Checkout Section -->
+<section id="cart-section" style="text-align: center; margin: 20px;">
+  <button class="checkout-btn" onclick="checkout()">Checkout</button>
+  <div id="cart-summary" style="display: none; margin-top: 20px;"></div>
+
+</section>
+
+  <footer>
+    <p>© 2025 UniNosh | Fast, Fresh & On Campus</p>
+  </footer>
+
+  <script>
+    function addToCart(button) {
+      let text = button.innerText;
+      let match = text.match(/x(\d+)/);
+      let count = match ? parseInt(match[1]) : 0;
+      count++;
+      button.innerText = `add to cart x${count}`;
+
+    }
+  </script>
+</body>
+</html>
