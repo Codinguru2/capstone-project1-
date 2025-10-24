@@ -25,6 +25,6 @@ It’s a modern, user-friendly platform built with HTML, CSS, and JavaScript.
 
 ## 💻 How to Run the Project
 
-1.https://codinguru2.github.io/capstone-project-4/order.html
+1.https://codinguru2.github.io/capstone-project-4/stone.html
 ---
 
